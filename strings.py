@@ -8,3 +8,6 @@ print(str1[2]) # c (!nullbasiert)
 print(str1[-1]) # a
 # die letzten 3 Zeichen
 print(str1[-3:]) # mma
+
+str3 = str1[-1] + str1[-3:] # amma
+print(str3)
