@@ -7,6 +7,10 @@ str2 = "Anführungszeichen"
 print(str1 + " " + str2)    # Hochkomma Anführungszeichen
 print(20 * '-') # --------------------
 
+# raw strings
+strRaw = r'Das ist ein/nRaw-String./n'
+print(strRaw)   # 'Das ist ein/nRaw-String./n'
+
 
 print(type(str1))   # <class 'str'>
 
@@ -30,4 +34,34 @@ print(str3)
 
 # Textlänge
 print(len(str2))    # 17
+
+# Slicing
+str4 = '0123456789'
+print(str4[3:6])    # '345'
+print(str4[:5])     # '01234'
+print(str4[5:])     # '56789'
+print(str4[-5:-1])  # '5678'
+print(str4[-5:9])   # '5678'
+print(str4[-5:])    # '56789'
+
+text = "Ene mene muh und raus bist du"
+suchtext = 'und'
+fundstelle = text.find(suchtext)
+print(text[fundstelle:fundstelle+len(suchtext)]) # und
+
+# Formatierung
+print("Text {} und {}".format("Argument1", "Argument2"))
+print("Text {1} und {0}".format("Argument1", "Argument2"))
+
+# String aufteilen
+print(text.split())     # ['Ene', 'mene', 'muh', 'und', 'raus', 'bist', 'du']
+
+# Konvertierung in Groß-/Kleinbuchstaben
+print(text.upper(), ',', text.lower())
+print("AbCdEfGh".swapcase())    # 'aBcDeFgH'
+
+# Prüfung mit isupper(), islower(), isalpha(), isspace(), isdigit()
+# startswith(), endswith()
+
+print('  Text  '.strip())   # 'Text'
 
