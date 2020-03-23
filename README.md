@@ -1,3 +1,4 @@
 # repython
 
-# Beispiele zu Python 3
+# Einfache Beispiele zu Python 3
+# für Einsteiger

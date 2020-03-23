@@ -26,9 +26,22 @@ for i in meineListe:
 print(x)    # 45
 print(22 in meineListe) # False
 
+
 meineListe = [12,11,13] + [3,2,1]
 print(meineListe)   # [12, 11, 13, 3, 2, 1]
 
 # Liste sortieren
 meineListe.sort()
 print(meineListe)   # [1, 2, 3, 11, 12, 13]
+
+print(4 * meineListe) # [1, 2, 3, 11, 12, 13, 1, 2, 3, 11, 12, 13, 1, 2, 3, 11, 12, 13, 1, 2, 3, 11, 12, 13]
+
+# Eintrag aus einer Liste löschen
+meineListe = [1,2,3,4,5,6,7]
+print(meineListe)   # [1, 2, 3, 4, 5, 6, 7]
+meineListe.pop()    
+print(meineListe)   # [1, 2, 3, 4, 5, 6]
+meineListe.remove(5)   
+print(meineListe)   # [1, 2, 3, 4, 6]
+del meineListe[3:5]
+print(meineListe)   # [1, 2, 3]
