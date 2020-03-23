@@ -53,6 +53,25 @@ print(text[fundstelle:fundstelle+len(suchtext)]) # und
 print("Text {} und {}".format("Argument1", "Argument2"))
 print("Text {1} und {0}".format("Argument1", "Argument2"))
 
+print("Preis: {:.2f} €".format(14.95733))   # 14.96 €
+
+format1 = '{:10}|{:>10}'    # '>' entspricht rechtsbündig
+format2 = '{:10}|{:10.2f} €'
+print(format1.format("Produkt", "Preis"))
+print(format2.format("Monitor", 379.8762))
+print(format2.format("Drucker", 12488.235))
+
+# Produkt   |     Preis
+# Monitor   |    379.88 €
+# Drucker   |  12488.24 €
+
+# Darstellung in unterschiedlichen Zahlenformaten
+myVal = 65535
+print('{:b}'.format(myVal))   # binär 1111111111111111
+print('{:o}'.format(myVal))   # oktal 177777
+print('{:x}'.format(myVal))   # hexadezimal ffff
+print('{:X}'.format(myVal))   # hexadezimal (groß) FFFF
+
 # String aufteilen
 print(text.split())     # ['Ene', 'mene', 'muh', 'und', 'raus', 'bist', 'du']
 
