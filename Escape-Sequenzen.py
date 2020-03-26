@@ -6,3 +6,7 @@
 # \"    Anführungszeichen
 # \'    Hochkomma
 # \\    Backslash
+
+# Unicode-Zeichen mit Escape-Sequenz ausgeben
+print("\u3F77")   # 㽷
+

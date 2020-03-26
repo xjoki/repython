@@ -1,19 +1,27 @@
 # lists
+# Listen sind mutable!
+
 leereListe = []
 meineListe = [1,2,3,4,5]
-print(meineListe)
+
+# Wieviele Elemente hat die Liste?
+print(len(meineListe))  # 5
+print(meineListe)   # [1, 2, 3, 4, 5]
+meineListe[1] = meineListe[1] + 10
+print(meineListe)   # [1, 12, 3, 4, 5]
 
 # auch unterschiedliche Datentypen sind möglich
 meineListe = ['Text', 3.1415 , 12, 'Hallo', 'Welt']
-print(meineListe)
+print(meineListe)   # ['Text', 3.1415, 12, 'Hallo', 'Welt']
 
 # Zugriff über Index (nullbasiert)
 print(meineListe[2]) # 12
 
 # auch Slicing geht
 print(meineListe[1:4])  # [3.1415, 12, 'Hallo']
+# Slicing Operationen geben neue Liste zurück (also Kopie)
 
-# Listen in Listen ...
+# Listen in Listen ... (nested lists)
 nList = [1, [1,2,[9,8],3], 2, [4,5,6]]
 print(nList)
 
@@ -45,3 +53,25 @@ meineListe.remove(5)
 print(meineListe)   # [1, 2, 3, 4, 6]
 del meineListe[3:5]
 print(meineListe)   # [1, 2, 3]
+
+# Slicing 
+# flache Kopie einer Liste
+meineListe = [1,2,3,4,5,6]
+neueListe = meineListe[:]
+print(id(meineListe), id(neueListe)) # unterschiedliche Id's
+meineListe[4:6] = []    # 2 Elemente entfernen
+print(meineListe)       # [1, 2, 3, 4]
+meineListe[:] = []      # Liste mit Slicing leeren
+print(meineListe)       # []
+
+# Anhängen an eine Liste
+meineListe = [1,2,3,4]
+meineListe.append(5)
+meineListe.append(['a','b'])
+print(meineListe)   # [1, 2, 3, 4, 5, ['a', 'b']]
+
+# aus range(...) eine Liste machen
+an_list=range(10)
+print(an_list)          # range(0, 10)
+an_list=list(an_list)
+print(an_list)          # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
