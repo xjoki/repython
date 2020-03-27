@@ -69,9 +69,16 @@ meineListe = [1,2,3,4]
 meineListe.append(5)
 meineListe.append(['a','b'])
 print(meineListe)   # [1, 2, 3, 4, 5, ['a', 'b']]
+meineListe.extend([7,8,9])  # mehrere Elemente anhängen
+print(meineListe)   # [1, 2, 3, 4, 5, ['a', 'b'], 7, 8, 9]
 
 # aus range(...) eine Liste machen
 an_list=range(10)
 print(an_list)          # range(0, 10)
 an_list=list(an_list)
 print(an_list)          # [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# Liste umkehren
+
+an_list.reverse()
+print(an_list)          # [9, 8, 7, 6, 5, 4, 3, 2, 1, 0]
